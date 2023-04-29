@@ -1,10 +1,10 @@
 # Instagram clone
 
-This is the final project for Kozminski University's  [Frontend Development With React](https://www.kozminski.edu.pl/pl/node/6841) postgraduate program.
+The final project for Kozminski University's  [Frontend Development With React](https://www.kozminski.edu.pl/pl/node/6841) postgraduate program.
 
 ## Task
 
-The task is to develop an Instagram-like app with limited functionalities.
+Develop an Instagram-like app with limited functionalities.
 
 ## Requirements
 
@@ -13,25 +13,25 @@ The project:
 - Uses JSONPlaceholder or a similar data source.
 - Utilizes REST API architecture.
 - Is available for cloning on GitHub or BitBucket.
-- Has two main screens: *News Feed* and *Search*.
+- Has two main screens: *News Feed* and *Explore*.
 
 ### The *News Feed* screen
 
 Business requirements:
 - The user can display photos.
 - The user can scroll the photos up and down.
-- The user can go from the *News Feed* screen to the *Search* screen.
+- The user can go from the *News Feed* screen to the *Explore* screen.
 
 Technical requirements:
 - The app uses routing.
 - Data is fetched from [JSONPlaceholder](https://jsonplaceholder.typicode.com/photos).
 - The remaining elements are mocked.
 
-### The *Search* screen
+### The *Explore* screen
 
 Business requirements:
 - The user can display photos as a grid.
-- The user can go from the *Search* screen to the *News Feed* screen.
+- The user can go from the *Explore* screen to the *News Feed* screen.
 
 Technical requirements:
 -  Data is fetched from [JSONPlaceholder](https://jsonplaceholder.typicode.com/photos).
