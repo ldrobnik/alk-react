@@ -1,11 +1,11 @@
-import './App.css'
+import ThemeProvider from "./shared/contexts/themeProvider";
 
 function App() {
 
   return (
-    <div>
+    <ThemeProvider>
       News feed
-    </div>
+    </ThemeProvider>
   )
 }
 
