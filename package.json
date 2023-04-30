@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "extract": "formatjs extract"
   },
   "dependencies": {
     "@emotion/react": "^11.10.8",
@@ -17,10 +18,12 @@
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-intl": "^6.4.1",
     "react-router-dom": "^6.11.0",
     "sort-by": "^1.2.0"
   },
   "devDependencies": {
+    "@formatjs/cli": "^6.1.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react-swc": "^3.0.0",

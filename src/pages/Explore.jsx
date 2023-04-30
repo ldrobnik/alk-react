@@ -1,9 +1,10 @@
 import Typography from "@mui/material/Typography";
+import { FormattedMessage } from "react-intl";
 
 const Explore = () => {
   return (
     <Typography variant="h2" component="h1">
-      Explore
+      <FormattedMessage id="explore.title" defaultMessage={"Explore"} />
     </Typography>
   );
 };
