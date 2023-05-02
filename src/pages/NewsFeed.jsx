@@ -13,7 +13,7 @@ const NewsFeed = () => {
 
   return (
     <Typography variant="h2" component="h1">
-      <FormattedMessage id="explore.newsfeed" defaultMessage={"News Feed"} />
+      <FormattedMessage id="newsfeed.title" defaultMessage={"News Feed"} />
     </Typography>
   );
 };
