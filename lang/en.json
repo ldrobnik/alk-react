@@ -1,8 +1,4 @@
 {
-  "newsfeed.title": {
-    "defaultMessage": "News Feed"
-  },
-  "explore.title": {
-    "defaultMessage": "Explore"
-  }
+  "newsfeed.title": "News Feed",
+  "explore.title": "Explore"
 }
