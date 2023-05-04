@@ -6,10 +6,10 @@ export const RootContainer = styled("div")({
 });
 
 export const SidebarContainer = styled(Box)(({ theme }) => ({
-  flexDirection: "column",
   height: "100vh",
   width: theme.spacing(4),
   backgroundColor: theme.palette.grey[100],
+  flexDirection: "column",
 }));
 
 export const MainPanel = styled("div")(({ theme }) => ({
