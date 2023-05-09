@@ -17,7 +17,7 @@ const router = createBrowserRouter([
   },
 ]);
 
-function App() {
+export default function App() {
   return (
     <ApiProvider>
       <IntlProvider>
@@ -28,5 +28,3 @@ function App() {
     </ApiProvider>
   );
 }
-
-export default App;
