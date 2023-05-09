@@ -3,7 +3,7 @@ import { FormattedMessage } from "react-intl";
 
 import Layout from "../features/layout/components/layout/Layout";
 
-const Explore = () => {
+export default function Explore() {
   return (
     <Layout>
       <Typography variant="h2" component="h1">
@@ -11,6 +11,4 @@ const Explore = () => {
       </Typography>
     </Layout>
   );
-};
-
-export default Explore;
+}
