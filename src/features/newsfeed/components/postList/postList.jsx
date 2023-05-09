@@ -3,6 +3,8 @@ import Stack from "@mui/joy/Stack";
 
 import usePhotos from "../../../../shared/hooks/usePhotos";
 
+import Post from "../post/Post";
+
 export default function PostList() {
   const { data, isLoading } = usePhotos();
 
@@ -12,9 +14,9 @@ export default function PostList() {
 
   return (
     <Stack>
-      <div>Post 1</div>
-      <div>Post 2</div>
-      <div>Post 3</div>
+      <Post />
+      <Post />
+      <Post />
     </Stack>
   );
 }
