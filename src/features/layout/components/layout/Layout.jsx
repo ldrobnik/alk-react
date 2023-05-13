@@ -1,5 +1,5 @@
-import Container from "@mui/material/Container";
 import Sidebar from "../sidebar/Sidebar";
+import Container from "@mui/material/Container";
 
 import { RootContainer, SidebarContainer, MainPanel } from "./Layout.styles";
 
@@ -10,9 +10,7 @@ export default function Layout({ children }) {
         <SidebarContainer>
           <Sidebar />
         </SidebarContainer>
-        <MainPanel>
-          <Container>{children}</Container>
-        </MainPanel>
+        <MainPanel>{children}</MainPanel>
       </RootContainer>
     </>
   );
