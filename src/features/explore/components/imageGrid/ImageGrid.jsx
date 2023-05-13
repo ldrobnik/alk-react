@@ -15,7 +15,6 @@ export default function ImageGrid() {
     if (data) {
       setImages(data.slice(0, 300));
     }
-    console.log(images);
   }, [data, isLoading]);
 
   return (
