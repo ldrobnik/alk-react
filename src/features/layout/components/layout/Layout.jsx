@@ -1,7 +1,7 @@
 import Container from "@mui/material/Container";
 import Sidebar from "../sidebar/Sidebar";
 
-import { RootContainer, SidebarContainer } from "./Layout.styles";
+import { RootContainer, SidebarContainer, MainPanel } from "./Layout.styles";
 
 export default function Layout({ children }) {
   return (
@@ -10,7 +10,9 @@ export default function Layout({ children }) {
         <SidebarContainer>
           <Sidebar />
         </SidebarContainer>
-        <Container>{children}</Container>
+        <MainPanel>
+          <Container>{children}</Container>
+        </MainPanel>
       </RootContainer>
     </>
   );
