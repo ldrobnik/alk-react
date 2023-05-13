@@ -37,16 +37,17 @@ export default function Sidebar() {
     <ToggleButtonGroup orientation="vertical" value={currentPage} exclusive>
       {SIDEBAR_BUTTONS.map((button) => {
         return (
-          <ToggleButton
-            key={button.value}
-            value={button.value}
-            sx={{
-              border: "none",
-              borderRadius: "0%",
-            }}
-          >
-            <Link to={button.path}>{buttonIcons[button.value]}</Link>
-          </ToggleButton>
+          <Link key={button.value} to={button.path}>
+            <ToggleButton
+              value={button.value}
+              sx={{
+                border: "none",
+                borderRadius: "0%",
+              }}
+            >
+              {buttonIcons[button.value]}
+            </ToggleButton>
+          </Link>
         );
       })}
     </ToggleButtonGroup>
