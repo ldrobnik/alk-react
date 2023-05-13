@@ -7,7 +7,7 @@ export const RootContainer = styled("div")({
 
 export const SidebarContainer = styled(Box)(({ theme }) => ({
   height: "100vh",
-  width: theme.spacing(4),
+  width: theme.spacing(6),
   backgroundColor: theme.palette.grey[100],
   flexDirection: "column",
 }));
