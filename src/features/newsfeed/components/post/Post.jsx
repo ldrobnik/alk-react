@@ -7,6 +7,8 @@ import IconButton from "@mui/material/IconButton";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 
+import { PostWrapper } from "./Post.styles";
+
 export default function Post(props) {
   // Capitalizes the first letter of a string
   const capitalizeFirstLetter = (string) => {
@@ -18,19 +20,23 @@ export default function Post(props) {
   };
 
   return (
-    <Card>
-      <CardMedia component="img" image={props.url} alt={props.title} />
-      <CardContent>
-        <Typography>{capitalizeFirstLetter(props.title)}</Typography>
-      </CardContent>
-      <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
-      </CardActions>
-    </Card>
+    <PostWrapper>
+      <Card>
+        <CardMedia component="img" image={props.url} alt={props.title} />
+        <CardContent>
+          <Typography variant="body2" color="text.secondary">
+            {capitalizeFirstLetter(props.title)}
+          </Typography>
+        </CardContent>
+        <CardActions disableSpacing>
+          <IconButton aria-label="add to favorites">
+            <FavoriteIcon />
+          </IconButton>
+          <IconButton aria-label="share">
+            <ShareIcon />
+          </IconButton>
+        </CardActions>
+      </Card>
+    </PostWrapper>
   );
 }
