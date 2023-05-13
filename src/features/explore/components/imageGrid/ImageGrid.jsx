@@ -17,7 +17,7 @@ export default function ImageGrid() {
   }, [data, isLoading]);
 
   return (
-    <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
+    <ImageList cols={4}>
       {images &&
         images.map((image) => (
           <ImageListItem key={image.url}>

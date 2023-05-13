@@ -11,8 +11,3 @@ export const SidebarContainer = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.grey[100],
   flexDirection: "column",
 }));
-
-export const MainPanel = styled("div")(({ theme }) => ({
-  flexGrow: 1,
-  padding: theme.spacing(3),
-}));
