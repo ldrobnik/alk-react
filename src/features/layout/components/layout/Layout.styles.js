@@ -15,6 +15,5 @@ export const SidebarContainer = styled(Box)(({ theme }) => ({
 
 export const MainPanel = styled("div")(({ theme }) => ({
   marginLeft: theme.spacing(6),
-  // maxWidth: "calc(100vw - 48px)",
-  horizontalAlign: "right",
+  minHeight: "100vh",
 }));

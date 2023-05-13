@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 
+import CenteredSpinner from "../../../../shared/components/spinner/CenteredSpinner";
 import usePhotos from "../../../../shared/hooks/usePhotos";
 
 export default function ImageGrid() {
@@ -17,13 +18,19 @@ export default function ImageGrid() {
   }, [data, isLoading]);
 
   return (
-    <ImageList cols={3}>
-      {images &&
-        images.map((image) => (
-          <ImageListItem key={image.url}>
-            <img src={image.url} alt={image.title} loading="lazy" />
-          </ImageListItem>
-        ))}
-    </ImageList>
+    <>
+      {isLoading ? (
+        <CenteredSpinner />
+      ) : (
+        <ImageList cols={3}>
+          {images &&
+            images.map((image) => (
+              <ImageListItem key={image.url}>
+                <img src={image.url} alt={image.title} loading="lazy" />
+              </ImageListItem>
+            ))}
+        </ImageList>
+      )}
+    </>
   );
 }
