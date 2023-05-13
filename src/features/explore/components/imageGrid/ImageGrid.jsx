@@ -3,8 +3,9 @@ import { useState, useEffect } from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 
-import CenteredSpinner from "../../../../shared/components/spinner/CenteredSpinner";
 import usePhotos from "../../../../shared/hooks/usePhotos";
+
+import CenteredSpinner from "../../../../shared/components/spinner/CenteredSpinner";
 
 export default function ImageGrid() {
   const { data, isLoading } = usePhotos();

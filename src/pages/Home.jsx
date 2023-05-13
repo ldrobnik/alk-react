@@ -7,9 +7,6 @@ import PostList from "../features/newsfeed/components/postList/PostList";
 export default function Home() {
   return (
     <Layout>
-      <Typography variant="h2" component="h1">
-        <FormattedMessage id="newsfeed.title" defaultMessage="News Feed" />
-      </Typography>
       <PostList />
     </Layout>
   );

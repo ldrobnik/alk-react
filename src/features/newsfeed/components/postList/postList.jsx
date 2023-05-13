@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Stack from "@mui/joy/Stack";
 
 import usePhotos from "../../../../shared/hooks/usePhotos";
-
+import CenteredSpinner from "../../../../shared/components/spinner/CenteredSpinner";
 import Post from "../post/Post";
 
 export default function PostList() {
@@ -17,10 +17,22 @@ export default function PostList() {
   }, [data]);
 
   return (
-    <Stack>
-      <Post />
-      <Post />
-      <Post />
-    </Stack>
+    <>
+      {isLoading ? (
+        <CenteredSpinner />
+      ) : (
+        <Stack>
+          {images &&
+            images.map((image) => (
+              <Post
+                key={image.url}
+                url={image.url}
+                title={image.title}
+                loading="lazy"
+              />
+            ))}
+        </Stack>
+      )}
+    </>
   );
 }
