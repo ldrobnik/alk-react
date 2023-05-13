@@ -13,6 +13,8 @@ export const SidebarContainer = styled(Box)(({ theme }) => ({
   flexDirection: "column",
 }));
 
-export const MainPanel = styled("div")({
-  flexGrow: 1,
-});
+export const MainPanel = styled("div")(({ theme }) => ({
+  marginLeft: theme.spacing(6),
+  // maxWidth: "calc(100vw - 48px)",
+  horizontalAlign: "right",
+}));
