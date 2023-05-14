@@ -1,6 +1,6 @@
 # Instagram clone
 
-The final project for Kozminski University's  [Frontend Development With React](https://www.kozminski.edu.pl/pl/node/6841) postgraduate program.
+The final project for Kozminski University's  [Frontend Development With React](https://www.kozminski.edu.pl/pl/node/6841) postgraduate program. Take a look at the [live demo](https://alk-drobnik.netlify.app/).
 
 ## Task
 
