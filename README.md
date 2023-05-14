@@ -10,7 +10,7 @@ Develop an Instagram-like app with limited functionalities.
 
 The project:
 - Is a web-based app.
-- Uses JSONPlaceholder or a similar data source.
+- Uses [JSONPlaceholder](https://jsonplaceholder.typicode.com/photos) or a similar data source.
 - Utilizes REST API architecture.
 - Is available for cloning on GitHub or BitBucket.
 - Has two main screens: *News Feed* and *Explore*.
