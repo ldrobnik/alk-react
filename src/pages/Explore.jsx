@@ -1,10 +1,12 @@
-import Typography from "@mui/material/Typography";
-import { FormattedMessage } from "react-intl";
+import { useEffect } from "react";
 
 import ImageGrid from "../features/explore/components/imageGrid/ImageGrid";
 import Layout from "../features/layout/components/layout/Layout";
 
 export default function Explore() {
+  useEffect(() => {
+    document.title = "Instaclone - Explore";
+  }, []);
   return (
     <Layout>
       <ImageGrid />
