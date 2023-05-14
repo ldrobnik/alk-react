@@ -1,10 +1,14 @@
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import { grey } from "@mui/material/colors";
+import { grey, orange } from "@mui/material/colors";
 
 export const RootContainer = styled("div")({
   display: "flex",
+  "::selection, *::selection": {
+    backgroundColor: orange[700],
+    color: grey[50],
+  },
 });
 
 export const SidebarContainer = styled(Box)(({ theme }) => ({
