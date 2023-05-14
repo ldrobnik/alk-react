@@ -14,7 +14,6 @@ export default function PostList() {
     if (data) {
       setImages(data.slice(0, 300));
     }
-    console.log(images);
   }, [data]);
 
   return (

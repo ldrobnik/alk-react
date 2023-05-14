@@ -5,8 +5,6 @@ import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import HomeIcon from "@mui/icons-material/Home";
 import SearchIcon from "@mui/icons-material/Search";
 
-import { RouteLink } from "./Sidebar.styles";
-
 import { SIDEBAR_BUTTONS } from "../../../../constants";
 
 const buttonIcons = {
@@ -16,6 +14,8 @@ const buttonIcons = {
 
 export default function Sidebar() {
   const location = useLocation();
+  const navigate = useNavigate();
+
   const [currentPath, setCurrentPath] = useState("");
   const [currentPage, setCurrentPage] = useState("home");
 
@@ -49,12 +49,17 @@ export default function Sidebar() {
           <ToggleButton
             key={button.value}
             value={button.value}
+            onClick={() => navigate(button.path)}
             sx={{
               border: "none",
               borderRadius: "0%",
+              width: "100%",
+              height: "100%",
+              display: "block",
+              margin: 0,
             }}
           >
-            <Link to={button.path}>{buttonIcons[button.value]}</Link>
+            {buttonIcons[button.value]}
           </ToggleButton>
         );
       })}
