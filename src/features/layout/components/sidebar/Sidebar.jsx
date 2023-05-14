@@ -4,8 +4,9 @@ import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import HomeIcon from "@mui/icons-material/Home";
 import SearchIcon from "@mui/icons-material/Search";
+import Tooltip from "@mui/material/Tooltip";
 
-import { SIDEBAR_BUTTONS } from "../../../../constants";
+import { SIDEBAR_BUTTONS, capitalizeFirstLetter } from "../../../../constants";
 
 const buttonIcons = {
   home: <HomeIcon />,
@@ -45,6 +46,7 @@ export default function Sidebar() {
       exclusive
     >
       {SIDEBAR_BUTTONS.map((button) => {
+        const capitalizedTitle = capitalizeFirstLetter(button.value);
         return (
           <ToggleButton
             key={button.value}
@@ -59,7 +61,9 @@ export default function Sidebar() {
               margin: 0,
             }}
           >
-            {buttonIcons[button.value]}
+            <Tooltip title={capitalizedTitle} placement="right" arrow>
+              {buttonIcons[button.value]}
+            </Tooltip>
           </ToggleButton>
         );
       })}

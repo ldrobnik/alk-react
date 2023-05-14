@@ -10,16 +10,9 @@ import { pink } from "@mui/material/colors";
 
 import { PostWrapper } from "./Post.styles";
 
-export default function Post(props) {
-  // Capitalizes the first letter of a string
-  const capitalizeFirstLetter = (string) => {
-    const firstLetter = string.charAt(0);
-    const firstLetterCap = firstLetter.toUpperCase();
-    const remainingLetters = string.slice(1);
-    const capitalizedText = firstLetterCap + remainingLetters;
-    return capitalizedText;
-  };
+import { capitalizeFirstLetter } from "../../../../constants";
 
+export default function Post(props) {
   return (
     <PostWrapper>
       <Card
