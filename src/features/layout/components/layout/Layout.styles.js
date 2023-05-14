@@ -1,16 +1,17 @@
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
+import { grey } from "@mui/material/colors";
 
 export const RootContainer = styled("div")({
   display: "flex",
+  backgroundColor: grey[200],
 });
 
 export const SidebarContainer = styled(Box)(({ theme }) => ({
   height: "100vh",
   width: theme.spacing(6),
   position: "fixed",
-  backgroundColor: theme.palette.grey[100],
   flexDirection: "column",
 }));
 

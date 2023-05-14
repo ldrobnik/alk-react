@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
+import { pink } from "@mui/material/colors";
 
 import { PostWrapper } from "./Post.styles";
 
@@ -23,12 +24,12 @@ export default function Post(props) {
     <PostWrapper>
       <Card>
         <CardMedia component="img" image={props.url} alt={props.title} />
-        <CardContent>
-          <Typography variant="body2" color="text.secondary">
-            {capitalizeFirstLetter(props.title)}
-          </Typography>
-        </CardContent>
-        <CardActions disableSpacing>
+        <CardActions
+          sx={{
+            backgroundColor: pink[50],
+          }}
+          disableSpacing
+        >
           <IconButton aria-label="add to favorites">
             <FavoriteIcon />
           </IconButton>
@@ -36,6 +37,15 @@ export default function Post(props) {
             <ShareIcon />
           </IconButton>
         </CardActions>
+        <CardContent
+          sx={{
+            backgroundColor: pink[50],
+          }}
+        >
+          <Typography variant="body2" color="text.secondary">
+            {capitalizeFirstLetter(props.title)}
+          </Typography>
+        </CardContent>
       </Card>
     </PostWrapper>
   );

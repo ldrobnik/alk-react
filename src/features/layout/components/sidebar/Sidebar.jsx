@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import HomeIcon from "@mui/icons-material/Home";
 import SearchIcon from "@mui/icons-material/Search";
+
+import { RouteLink } from "./Sidebar.styles";
 
 import { SIDEBAR_BUTTONS } from "../../../../constants";
 
@@ -26,7 +28,6 @@ export default function Sidebar() {
     const currentButton = SIDEBAR_BUTTONS.find(
       (button) => button.path === currentPath
     );
-
     // Sets the current page according to the index.
     if (currentButton) {
       setCurrentPage(currentButton.value);
@@ -34,20 +35,27 @@ export default function Sidebar() {
   }, [currentPath]);
 
   return (
-    <ToggleButtonGroup orientation="vertical" value={currentPage} exclusive>
+    <ToggleButtonGroup
+      color="primary"
+      orientation="vertical"
+      value={currentPage}
+      sx={{
+        padding: 0,
+      }}
+      exclusive
+    >
       {SIDEBAR_BUTTONS.map((button) => {
         return (
-          <Link key={button.value} to={button.path}>
-            <ToggleButton
-              value={button.value}
-              sx={{
-                border: "none",
-                borderRadius: "0%",
-              }}
-            >
-              {buttonIcons[button.value]}
-            </ToggleButton>
-          </Link>
+          <ToggleButton
+            key={button.value}
+            value={button.value}
+            sx={{
+              border: "none",
+              borderRadius: "0%",
+            }}
+          >
+            <Link to={button.path}>{buttonIcons[button.value]}</Link>
+          </ToggleButton>
         );
       })}
     </ToggleButtonGroup>
