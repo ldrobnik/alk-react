@@ -22,7 +22,11 @@ export default function Post(props) {
 
   return (
     <PostWrapper>
-      <Card>
+      <Card
+        sx={{
+          backgroundColor: pink[50],
+        }}
+      >
         <CardMedia component="img" image={props.url} alt={props.title} />
         <CardActions
           sx={{
@@ -30,10 +34,10 @@ export default function Post(props) {
           }}
           disableSpacing
         >
-          <IconButton aria-label="add to favorites">
+          <IconButton color="primary" aria-label="add to favorites">
             <FavoriteIcon />
           </IconButton>
-          <IconButton aria-label="share">
+          <IconButton color="primary" aria-label="share">
             <ShareIcon />
           </IconButton>
         </CardActions>

@@ -5,7 +5,6 @@ import { grey } from "@mui/material/colors";
 
 export const RootContainer = styled("div")({
   display: "flex",
-  backgroundColor: grey[200],
 });
 
 export const SidebarContainer = styled(Box)(({ theme }) => ({

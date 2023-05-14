@@ -1,5 +1,5 @@
 import CssBaseline from "@mui/material/CssBaseline";
-import { pink, orange } from "@mui/material/colors";
+import { pink, orange, grey } from "@mui/material/colors";
 
 import {
   createTheme,
@@ -12,8 +12,17 @@ let theme = createTheme({
     primary: {
       main: pink[500],
     },
-    secondary: {
+    warning: {
       main: orange[500],
+    },
+  },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          backgroundColor: grey[200],
+        },
+      },
     },
   },
 });
