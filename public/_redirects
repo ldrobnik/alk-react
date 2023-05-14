@@ -1,0 +1,2 @@
+# Prevent errors when accessing routes other than '/'
+/*    /index.html   200
