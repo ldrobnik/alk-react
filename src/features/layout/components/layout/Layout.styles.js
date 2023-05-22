@@ -1,6 +1,5 @@
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
 import { grey, orange } from "@mui/material/colors";
 
 export const RootContainer = styled("div")({
@@ -18,9 +17,9 @@ export const SidebarContainer = styled(Box)(({ theme }) => ({
   flexDirection: "column",
 }));
 
-export const MainPanel = styled(Container)(({ theme }) => ({
+export const MainPanel = styled("div")(({ theme }) => ({
   marginLeft: theme.spacing(6),
   minHeight: "100vh",
   width: "100%",
-  padding: theme.spacing(2),
+  padding: theme.spacing(3),
 }));
