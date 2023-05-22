@@ -7,6 +7,7 @@ export default function Explore() {
   useEffect(() => {
     document.title = "Instaclone - Explore";
   }, []);
+
   return (
     <Layout>
       <ImageGrid />
