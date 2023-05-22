@@ -7,10 +7,21 @@ import IconButton from "@mui/material/IconButton";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import { pink } from "@mui/material/colors";
+import { LoremIpsum } from "lorem-ipsum";
 
 import { PostWrapper } from "./Post.styles";
 
-import { capitalizeFirstLetter } from "../../../../constants";
+// Parameters of the dummy text:
+const lorem = new LoremIpsum({
+  sentencesPerParagraph: {
+    max: 3,
+    min: 2,
+  },
+  wordsPerSentence: {
+    max: 10,
+    min: 7,
+  },
+});
 
 export default function Post(props) {
   return (
@@ -40,7 +51,7 @@ export default function Post(props) {
           }}
         >
           <Typography variant="body2" color="text.secondary">
-            {capitalizeFirstLetter(props.title)}
+            {lorem.generateParagraphs(1)}
           </Typography>
         </CardContent>
       </Card>
