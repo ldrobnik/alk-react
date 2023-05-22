@@ -1,5 +1,4 @@
 import Sidebar from "../sidebar/Sidebar";
-import Container from "@mui/material/Container";
 
 import { RootContainer, SidebarContainer, MainPanel } from "./Layout.styles";
 

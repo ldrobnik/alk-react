@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
-import { pink } from "@mui/material/colors";
+import { orange } from "@mui/material/colors";
 import { LoremIpsum } from "lorem-ipsum";
 
 import { PostWrapper, PhotoWrapper } from "./Post.styles";
@@ -27,13 +27,13 @@ export default function Post(props) {
     <PostWrapper>
       <Card
         sx={{
-          backgroundColor: pink[50],
+          backgroundColor: orange[100],
         }}
       >
         <PhotoWrapper component="img" image={props.url} alt={props.title} />
         <CardActions
           sx={{
-            backgroundColor: pink[50],
+            backgroundColor: orange[100],
           }}
           disableSpacing
         >
@@ -46,7 +46,7 @@ export default function Post(props) {
         </CardActions>
         <CardContent
           sx={{
-            backgroundColor: pink[50],
+            backgroundColor: orange[100],
           }}
         >
           <Typography variant="body2" color="text.secondary">

@@ -10,10 +10,7 @@ import {
 let theme = createTheme({
   palette: {
     primary: {
-      main: pink[500],
-    },
-    warning: {
-      main: orange[500],
+      main: orange[700],
     },
   },
   components: {
