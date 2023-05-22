@@ -13,7 +13,8 @@ export default function ImageGrid() {
 
   useEffect(() => {
     if (data) {
-      setImages(data.slice(0, 300));
+      // Use a portion of the fetched data.
+      setImages(data.slice(0, 1000));
     }
   }, [data, isLoading]);
 
