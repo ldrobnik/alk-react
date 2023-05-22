@@ -22,7 +22,13 @@ export default function ImageGrid() {
       {isLoading ? (
         <CenteredSpinner />
       ) : (
-        <ImageList cols={3}>
+        <ImageList
+          gap={8}
+          sx={{
+            gridTemplateColumns:
+              "repeat(auto-fill, minmax(200px, 1fr)) !important",
+          }}
+        >
           {images &&
             images.map((image) => (
               <ImageListItem key={image.url}>

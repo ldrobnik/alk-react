@@ -11,12 +11,8 @@ export const PhotoWrapper = styled(CardMedia)(({ theme }) => ({
     minWidth: "500px",
     minHeight: "500px",
   },
-  [theme.breakpoints.down("sm")]: {
-    minWidth: "90vw",
-    minHeight: "90vw",
-  },
-  [theme.breakpoints.down("sm")]: {
-    minWidth: "70vw",
-    minHeight: "70vw",
+  [theme.breakpoints.down("md")]: {
+    minWidth: "1fr",
+    minHeight: "1fr",
   },
 }));

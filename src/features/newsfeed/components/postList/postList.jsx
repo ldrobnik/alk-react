@@ -29,7 +29,6 @@ export default function PostList() {
                 key={image.url}
                 url={image.url}
                 title={capitalizeFirstLetter(image.title)}
-                loading="lazy"
               />
             ))}
         </ListWrapper>
