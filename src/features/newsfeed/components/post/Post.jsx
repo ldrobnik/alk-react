@@ -1,5 +1,4 @@
 import Card from "@mui/material/Card";
-import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import Typography from "@mui/material/Typography";
@@ -9,7 +8,7 @@ import ShareIcon from "@mui/icons-material/Share";
 import { pink } from "@mui/material/colors";
 import { LoremIpsum } from "lorem-ipsum";
 
-import { PostWrapper } from "./Post.styles";
+import { PostWrapper, PhotoWrapper } from "./Post.styles";
 
 // Parameters of the dummy text:
 const lorem = new LoremIpsum({
@@ -31,7 +30,7 @@ export default function Post(props) {
           backgroundColor: pink[50],
         }}
       >
-        <CardMedia component="img" image={props.url} alt={props.title} />
+        <PhotoWrapper component="img" image={props.url} alt={props.title} />
         <CardActions
           sx={{
             backgroundColor: pink[50],

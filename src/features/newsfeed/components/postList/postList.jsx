@@ -5,6 +5,7 @@ import CenteredSpinner from "../../../../shared/components/spinner/CenteredSpinn
 import Post from "../post/Post";
 
 import { ListWrapper } from "./PostList.styles";
+import { capitalizeFirstLetter } from "../../../../constants";
 
 export default function PostList() {
   const { data, isLoading } = usePhotos();
@@ -27,7 +28,7 @@ export default function PostList() {
               <Post
                 key={image.url}
                 url={image.url}
-                title={image.title}
+                title={capitalizeFirstLetter(image.title)}
                 loading="lazy"
               />
             ))}
