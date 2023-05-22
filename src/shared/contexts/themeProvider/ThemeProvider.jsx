@@ -1,5 +1,5 @@
 import CssBaseline from "@mui/material/CssBaseline";
-import { pink, orange, grey } from "@mui/material/colors";
+import { orange, grey } from "@mui/material/colors";
 
 import {
   createTheme,

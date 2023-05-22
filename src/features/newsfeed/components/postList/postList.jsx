@@ -14,7 +14,7 @@ export default function PostList() {
   useEffect(() => {
     if (data) {
       // Use a portion of the fetched data.
-      setImages(data.slice(0, 1000));
+      setImages(data.slice(0, 900));
     }
   }, [data]);
 
