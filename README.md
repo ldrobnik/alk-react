@@ -13,14 +13,14 @@ The project:
 - Uses [JSONPlaceholder](https://jsonplaceholder.typicode.com/photos) or a similar data source.
 - Utilizes REST API architecture.
 - Is available for cloning on GitHub or BitBucket.
-- Has two main screens: *News Feed* and *Explore*.
+- Has two main screens: *Home* and *Explore*.
 
-### The *News Feed* screen
+### The *Home* screen
 
 Business requirements:
 - The user can display photos.
 - The user can scroll the photos up and down.
-- The user can go from the *News Feed* screen to the *Explore* screen.
+- The user can go from the *Home* screen to the *Explore* screen.
 
 Technical requirements:
 - The app uses routing.
@@ -31,7 +31,7 @@ Technical requirements:
 
 Business requirements:
 - The user can display photos as a grid.
-- The user can go from the *Explore* screen to the *News Feed* screen.
+- The user can go from the *Explore* screen to the *Home* screen.
 
 Technical requirements:
 -  Data is fetched from [JSONPlaceholder](https://jsonplaceholder.typicode.com/photos).
