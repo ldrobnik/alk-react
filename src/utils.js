@@ -6,3 +6,8 @@ export const capitalizeFirstLetter = (string) => {
   const capitalizedText = firstLetterCap + remainingLetters;
   return capitalizedText;
 };
+
+// Scrolls the window to top.
+export const scrollToTop = () => {
+  window.scrollTo(0, 0);
+};
