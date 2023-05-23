@@ -27,7 +27,12 @@ export default function Sidebar() {
       {SIDEBAR_BUTTONS.map((button) => {
         const capitalizedTitle = capitalizeFirstLetter(button.value);
         return (
-          <NavButton key={button.value} component={NavLink} to={button.path}>
+          <NavButton
+            key={button.value}
+            value={button.value}
+            component={NavLink}
+            to={button.path}
+          >
             <Tooltip title={capitalizedTitle} placement="right" arrow>
               {buttonIcons[button.value]}
             </Tooltip>
