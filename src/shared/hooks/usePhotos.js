@@ -10,5 +10,7 @@ async function getPhotos() {
 }
 
 export default function usePhotos() {
-  return useQuery(["photos"], () => getPhotos());
+  return useQuery(["photos"], () => getPhotos(), {
+    select: (data) => data.slice(0, 900),
+  });
 }
