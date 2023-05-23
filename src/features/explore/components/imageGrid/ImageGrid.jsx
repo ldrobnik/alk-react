@@ -6,7 +6,7 @@ import usePhotos from "../../../../shared/hooks/usePhotos";
 import CenteredSpinner from "../../../../shared/components/spinner/CenteredSpinner";
 
 export default function ImageGrid() {
-  const { data, isLoading } = usePhotos();
+  const { data, isLoading } = usePhotos(900);
 
   return (
     <>

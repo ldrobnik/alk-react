@@ -9,8 +9,8 @@ async function getPhotos() {
   return data;
 }
 
-export default function usePhotos() {
+export default function usePhotos(upperLimit) {
   return useQuery(["photos"], () => getPhotos(), {
-    select: (data) => data.slice(0, 900),
+    select: (data) => data.slice(0, upperLimit),
   });
 }

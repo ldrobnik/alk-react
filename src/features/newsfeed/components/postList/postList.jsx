@@ -6,7 +6,7 @@ import { ListWrapper } from "./PostList.styles";
 import { capitalizeFirstLetter } from "../../../../utils";
 
 export default function PostList() {
-  const { data, isLoading } = usePhotos();
+  const { data, isLoading } = usePhotos(200);
 
   return (
     <>
