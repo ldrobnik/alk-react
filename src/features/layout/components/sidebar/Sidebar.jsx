@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import ToggleButton from "@mui/material/ToggleButton";
+import { NavLink } from "react-router-dom";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import HomeIcon from "@mui/icons-material/Home";
 import SearchIcon from "@mui/icons-material/Search";
 import Tooltip from "@mui/material/Tooltip";
+
+import { NavButton } from "./Sidebar.styles";
 
 import { SIDEBAR_BUTTONS } from "../../../../constants";
 import { capitalizeFirstLetter } from "../../../../utils";
@@ -15,32 +15,10 @@ const buttonIcons = {
 };
 
 export default function Sidebar() {
-  const location = useLocation();
-  const navigate = useNavigate();
-
-  const [currentPath, setCurrentPath] = useState("");
-  const [currentPage, setCurrentPage] = useState("home");
-
-  useEffect(() => {
-    setCurrentPath(location.pathname);
-  }, [location]);
-
-  useEffect(() => {
-    // Identifies the sidebar button to be active based on the current path.
-    const currentButton = SIDEBAR_BUTTONS.find(
-      (button) => button.path === currentPath
-    );
-    // Sets the current page according to the index.
-    if (currentButton) {
-      setCurrentPage(currentButton.value);
-    }
-  }, [currentPath]);
-
   return (
     <ToggleButtonGroup
       color="primary"
       orientation="vertical"
-      value={currentPage}
       sx={{
         padding: 0,
       }}
@@ -49,23 +27,11 @@ export default function Sidebar() {
       {SIDEBAR_BUTTONS.map((button) => {
         const capitalizedTitle = capitalizeFirstLetter(button.value);
         return (
-          <ToggleButton
-            key={button.value}
-            value={button.value}
-            onClick={() => navigate(button.path)}
-            sx={{
-              border: "none",
-              borderRadius: "0%",
-              width: "100%",
-              height: "100%",
-              display: "block",
-              margin: 0,
-            }}
-          >
+          <NavButton key={button.value} component={NavLink} to={button.path}>
             <Tooltip title={capitalizedTitle} placement="right" arrow>
               {buttonIcons[button.value]}
             </Tooltip>
-          </ToggleButton>
+          </NavButton>
         );
       })}
     </ToggleButtonGroup>
