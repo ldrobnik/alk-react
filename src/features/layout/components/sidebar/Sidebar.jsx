@@ -6,7 +6,8 @@ import HomeIcon from "@mui/icons-material/Home";
 import SearchIcon from "@mui/icons-material/Search";
 import Tooltip from "@mui/material/Tooltip";
 
-import { SIDEBAR_BUTTONS, capitalizeFirstLetter } from "../../../../constants";
+import { SIDEBAR_BUTTONS } from "../../../../constants";
+import { capitalizeFirstLetter } from "../../../../utils";
 
 const buttonIcons = {
   home: <HomeIcon />,

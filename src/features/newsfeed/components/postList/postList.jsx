@@ -5,7 +5,7 @@ import CenteredSpinner from "../../../../shared/components/spinner/CenteredSpinn
 import Post from "../post/Post";
 
 import { ListWrapper } from "./PostList.styles";
-import { capitalizeFirstLetter } from "../../../../constants";
+import { capitalizeFirstLetter } from "../../../../utils";
 
 export default function PostList() {
   const { data, isLoading } = usePhotos();
